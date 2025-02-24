@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // 启用 CORS
 app.use(cors());
@@ -16,7 +16,7 @@ const mockDataPath = path.join(__dirname, 'mock');
 // 自动注册路由
 fs.readdirSync(mockDataPath).forEach(file => {
     if (file.endsWith('.json')) {
-        const apiPath = '/report/alarm/statement/' + file.replace('.json', '');
+        const apiPath = '/json/report/alarm/statement/' + file.replace('.json', '');
         const jsonData = require(path.join(mockDataPath, file));
         
         app.get(apiPath, (req, res) => {
