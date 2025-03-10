@@ -16,7 +16,7 @@ const mockDataPath = path.join(__dirname, 'mock');
 // 自动注册路由
 fs.readdirSync(mockDataPath).forEach(file => {
     if (file.endsWith('.json')) {
-        const apiPath = '/json/report/alarm/statement/' + file.replace('.json', '');
+        const apiPath = '/json/mock/' + file.replace('.json', '');
         const jsonData = require(path.join(mockDataPath, file));
         
         app.get(apiPath, (req, res) => {

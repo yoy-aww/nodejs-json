@@ -22,6 +22,11 @@
    ```
 2. 程序将处理 mock 目录下的 JSON 数据文件
 
+3. 访问接口
+    ``` base
+    http://localhost:5000/json/mock/users
+    ```
+
 ## 项目结构
 ```
 .
@@ -30,10 +35,7 @@
 ├── pnpm-lock.yaml      # pnpm 锁文件
 ├── .gitignore          # Git 忽略文件
 └── mock/               # Mock 数据目录
-    ├── searchTicketUndispatchedByKpi.json
-    ├── searchAlarmTitleAndObjectNameTren.json
-    ├── searchAlarmTitle.json
-    └── searchByKpi.json
+    └── users.json
 ```
 
 ## 贡献指南
